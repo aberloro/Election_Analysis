@@ -201,4 +201,7 @@ Use an IF conditional statement to evlauate which candidate had the most votes a
          txt_file.write(winning_candidate_summary)
 
 ## Summary
- In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+
+ This code can be used to pull the same deliverables in any state election as-is, and can be easily modofied to scale to larger national elecitions.  An input(function) could be added to ask if we are looking at results from a state election with a county breakdown a national election with a state break down, or even a smaller city election with a district / precinct breakdown.  The user input could be incorporated into nameing the variables appropriately (state_votes vs county_votes) and for updating the txt file as well ("largest district" vs "largest county").    
+ 
+  Another potentially useful modification would be to dive a bit deeper into a candidate's performance within each county.  The current code pulls information on how a candidate did over-all, we could add code that analyses what percent of the vote each candidate captured in each county.  This modification could also be used if the code were used in smaller city elections or larger national elections. 
