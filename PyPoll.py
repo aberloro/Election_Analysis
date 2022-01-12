@@ -1,4 +1,4 @@
-# Add our dependencies.
+# Add python dependencies
 import csv
 import os
 
@@ -39,10 +39,8 @@ with open(file_to_load) as election_data:
         # Add to the total vote accumulator
         total_votes += 1
 
-        #print candidate name from each row
+        #print candidate name and county name from each row
         candidate_name = row[2]
-
-        # get county name from each row
         county_name = row[1]
 
         # if candidate does not match existing candidate
@@ -69,7 +67,7 @@ with open(file_to_load) as election_data:
         #add a vote to that county's vote accumulator
         counties_votes[county_name] += 1
 
-# Save results to our text file
+# Save results to the text file
 with open(file_to_save, "w") as txt_file:
     election_results = (
         f"\nElection Results\n"
@@ -81,7 +79,7 @@ with open(file_to_save, "w") as txt_file:
     #print to terminal
     print(election_results, end="")
 
-    #save final vote to text file
+    #save election vote results to text file
     txt_file.write(election_results)
 
     # get county from counties dictionary
@@ -111,7 +109,7 @@ with open(file_to_save, "w") as txt_file:
             f"Largest County Turnout: {largest_county} \n "
             f"------------------------- \n " )
     txt_file.write(f"------------------------- \n"
-            f"Largest County Turnout: {largest_county} \n "
+            f"Largest County Turnout: {largest_county}\n "
             f"------------------------- \n " )
 
     # Iterate through the candidate list.
